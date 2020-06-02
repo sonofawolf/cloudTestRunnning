@@ -20,8 +20,8 @@ public class MyFirstAppium {
 	public WebDriver driver;
 	
 	String kobitonURL = "https://svatitech:84b66fb4-d842-4faf-958d-66bd97a3118b@api.kobiton.com/wd/hub";
-	String deviceName = "Galaxy S10+";
-	String platformVersion = "9";
+	String deviceName = "GOOGLE Pixel 4";
+	String platformVersion = "10";
 	String platformName = "Android";
 	
 	
@@ -29,12 +29,16 @@ public class MyFirstAppium {
 	public void setUp() throws Exception{
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		
+		// The generated session will be visible to you only. 
 		capabilities.setCapability("sessionName", "Automation test session");
 		capabilities.setCapability("sessionDescription", "");
 		capabilities.setCapability("deviceOrientation", "portrait");
 		capabilities.setCapability("captureScreenshots", true);
 		capabilities.setCapability("browserName", "chrome");
 		capabilities.setCapability("deviceGroup", "KOBITON");
+		// For deviceName, platformVersion Kobiton supports wildcard
+		// character *, with 3 formats: *text, text* and *text*
+		// If there is no *, Kobiton will match the exact text provided
 		capabilities.setCapability("deviceName", deviceName);
 		capabilities.setCapability("platformVersion", platformVersion);
 		capabilities.setCapability("platformName", platformName);

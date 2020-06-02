@@ -4,7 +4,7 @@
  <parameter name="sBrowserType"  value="Chrome"/>
   <test name="Regression1" >
     <classes>
-          <class name="colin.androidTesting.MyFirstAppium.java" />
+          <class name="colin.androidTesting.MyFirstAppium" />
     </classes>
   </test>
  
